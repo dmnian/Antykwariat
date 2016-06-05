@@ -28,12 +28,21 @@
 		background-color: orange;
 	}
 
+	.tabela{
+		border-collapse: collapse;
+	}
+
+	table, th, td{
+		border: 1px solid black;
+	}
+
 	.okladka{
 		height: 200px;
 	}
 
 	.ksiazka{
 		float:left;
+		padding: 20px;
 	}
 
 	article{
