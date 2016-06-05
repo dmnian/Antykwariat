@@ -1,0 +1,49 @@
+	body{
+		margin: auto;
+		width: 1100px;
+	}
+
+	h1{
+		color: white;
+	}
+
+	header{
+		padding: 20px;
+		background-color: gray;
+	}
+
+	ul#menu li {
+		display: inline;
+	}
+
+	ul#menu li a {
+		background-color: gray;
+		color: white;
+		padding: 10px 20px;
+		text-decoration: none;
+		border-radius: 4px 4px 0 0;
+	}
+
+	ul#menu li a:hover {
+		background-color: orange;
+	}
+
+	.okladka{
+		height: 200px;
+	}
+
+	.ksiazka{
+		float:left;
+	}
+
+	article{
+		margin: auto;
+	}
+
+	footer{
+		background-color: gray;
+		color: white;
+		clear:both;
+		padding: 20px;
+		text-align: center;
+	}
