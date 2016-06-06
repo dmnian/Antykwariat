@@ -14,6 +14,7 @@
 
 	ul#menu li {
 		display: inline;
+		margin: 1px;
 	}
 
 	ul#menu li a {
@@ -42,7 +43,7 @@
 
 	.ksiazka{
 		float:left;
-		padding: 20px;
+		padding: 10px;
 	}
 
 	article{

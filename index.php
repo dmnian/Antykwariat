@@ -1,5 +1,5 @@
 <?php 
-	// require_once "connect.php"
+	session_start();
  ?>
 <html lang="pl">
 <head>
@@ -17,7 +17,7 @@
 			<li><a href="index.php">home</a></li>
 			<li><a href="#" id="ksiazki">ksiazki</a></li>
 			<li><a href="#">zarejestruj się</a></li>
-			<li><a href="#">zaloguj się</a></li>
+			<li><a href="#" <?php  echo (isset($_SESSION['zalogowany'])) ? "id='wyloguj'>wyloguj się" : "id='zaloguj'>zaloguj się"; ?></a></li>
 			<li><a href="#" id="koszyk">koszyk</a></li>
 			<!-- <li><a href="php/koszyk.php">koszyk</a></li> -->
 		</ul>
