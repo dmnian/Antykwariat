@@ -4,7 +4,7 @@ include '../connect.php';
 
 if(isset( $_SESSION['koszyk']) && count($_SESSION['koszyk'])!= 0) {
 	$tab = $_SESSION['koszyk'];
-	echo "<table class='tabela'>";
+	echo "<table class='table tabela table-hover'>";
 
 	$sql = "SELECT * FROM ksiazki INNER JOIN kategorie ON ksiazki.id_kategorii=kategorie.id_kategorii WHERE dostepnosc!=0";
 
@@ -15,7 +15,7 @@ if(isset( $_SESSION['koszyk']) && count($_SESSION['koszyk'])!= 0) {
 		while($row = $result->fetch_assoc()){
 
 			if(in_array($row['id_ksiazki'], $tab)){		
-				printf("<tr  data-id=%d><td>%s</td><td> %s</td> <td>%d</td> <td class ='cena'>%.2f</td><td>%s</td><td><button class="."'delete'".">usuń</button></td></tr>", $row['id_ksiazki'], $row["tytul"], $row["autor"], $row["rok"], $row["cena"], $row["nazwa"]);
+				printf("<tr  data-id=%d><td>%s</td><td> %s</td> <td>%d</td> <td class ='cena'>%.2f</td><td>%s</td><td><button class="."'delete  btn btn-default'".">usuń</button></td></tr>", $row['id_ksiazki'], $row["tytul"], $row["autor"], $row["rok"], $row["cena"], $row["nazwa"]);
 				$wartosc += $row['cena'];
 			}
 		}
@@ -34,11 +34,11 @@ if(isset( $_SESSION['koszyk']) && count($_SESSION['koszyk'])!= 0) {
 	
 
 	$_SESSION['wartosc'] = $wartosc;
-	echo "<button id='wartosc'>Oblicz wartość</button>";
+	echo "<button id='wartosc' class='btn btn-default'>Oblicz wartość</button>";
 	echo "<div id='suma'></div>";
 	
 
-echo (isset($_SESSION['id_uzytkownika'])) ? "<button id='zamow'>Zamów</button>": "<br>aby złożyć zamówienie należy być zalogowanym!";
+echo (isset($_SESSION['id_uzytkownika'])) ? "<button id='zamow' class='btn btn-default'>Zamów</button>": "<br>aby złożyć zamówienie należy być zalogowanym!";
 
 }else {
 	echo " koszyk pusty";
