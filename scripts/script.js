@@ -1,6 +1,14 @@
 $(document).ready(function(){
 
-	$("section").on("click", ".dodaj", function(){
+	// $("section").on("click", ".dodaj", function(){
+	// 	var id = $(this).closest(".ksiazka").data("id");
+	// 	// $.post('php/koszyk.php', {idk: id}, function(data, status){
+	// 		$.post("php/dodaj_do_koszyka.php", {'idKsiazki': id}, function(data, status){
+	// 		alert(data); //dane ktore wrocily z koszyka
+	// 	});
+	// 	});
+
+			$("section").on("click", ".dodaj", function(){
 		var id = $(this).closest(".ksiazka").data("id");
 		// $.post('php/koszyk.php', {idk: id}, function(data, status){
 			$.post("php/dodaj_do_koszyka.php", {'idKsiazki': id}, function(data, status){
@@ -11,6 +19,10 @@ $(document).ready(function(){
 	$("nav").on("click", "#ksiazki", function(){
 		$("#tresc").load("php/ksiazki.php");
 	});
+
+// $("#tresc").on("click", function(){
+// 		$("#tresc").load("php/ksiazki.php");
+// 	});
 
 
 	$("nav").on("click", "#koszyk", function(){
@@ -49,7 +61,7 @@ $(document).ready(function(){
 
 
 		if(($("#loginR").val().length > 2)&& ($("#hasloR").val() === $("#hasloR2").val()) && ($("#hasloR").val().length > 5) &&($("#imie").val() !=="") &&($("#nazwisko").val() !=="") && ($("#mail").val() !== "")){
-			alert("da sie");
+			// alert("da sie");
 
 			var login = $("#loginR").val();
 			var haslo = $("#hasloR").val();
@@ -66,6 +78,8 @@ $(document).ready(function(){
 			 	email: email
 			 }, function(data, status){
 			 	alert(data);
+			 	// $("section").load("zaloguj.html");
+			 	$("#tresc").load("php/zaloguj.html form");
 			 });
 		}
 		
